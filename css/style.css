@@ -1,0 +1,518 @@
+/* start variables */
+
+/* end variables */
+
+
+/* start global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    font-family: 'LFT Etica Mono';
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.8px;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right:15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small screens */
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+/* medium screens */
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+/* large screens */
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+/* end global rules */
+
+/*start background */
+/* .image-container{
+    background-image: url(/css/images/star.jpg);
+    background-size:cover;
+    background-position: top;
+    min-height:100vh;   
+
+} */
+/*end background */
+
+/* start header */
+
+header{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.works-header{
+    position: static;
+}
+header .container{
+    text-transform: capitalize;
+    background-color: transparent;
+
+}
+header .container nav{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    transition: 10s;
+}
+
+header .container nav .nav-bar{
+    padding: 25px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+}
+
+header .container nav .nav-bar li a{
+    text-decoration: none;
+    font-size: 14px;
+    text-wrap: nowrap; 
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+header .container nav .nav-bar span{
+    margin: 0px 3px;
+    color: #b98d59;
+}
+
+header .container nav .nav-bar li a:hover{
+    color: #ffd29c;
+}
+
+
+header .container nav .toggle-menu{
+    font-size: 5vw;
+    color: #cedbe1;
+    justify-self: flex-end;
+    transition: 1s;
+}
+
+header .container nav .toggle-menu:hover{
+    color: #ffd29c;
+    
+}
+@media (min-width : 768px) {
+
+    header .container nav .toggle-menu{
+        display: none;
+    }
+}
+
+@media (max-width : 768px) {
+
+    header .container nav{
+        justify-content: end;
+    }
+
+    header .container nav .nav-bar , header .container nav .nav-bar span{
+        display: none;
+    }
+
+    /* show nav when toggle is hovered (legacy) or when nav has .open class (touch-friendly) */
+    header .container nav .toggle-menu:hover + ul,
+    header .container nav.open .nav-bar,
+    header .container nav.open .nav-bar span{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: rgb(0 0 0 / 20%);
+        border-top: 2px solid #ffd29c;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width:100%;
+    }
+
+    header .container nav .nav-bar li{
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        transition: 1s;
+    }
+
+    header .container nav .nav-bar li:hover{
+        color: #ffd29c;
+        border-bottom: 1px solid #ffd29c;    
+    }
+
+    header .container nav .nav-bar li a{
+        padding: 15px !important; 
+        font-size: 10px;
+        text-wrap: nowrap; 
+    }
+    
+}
+
+/* end header */
+
+/* start home page landing */
+.landing{
+    background-image: url(../assets/images/star.jpg);
+    background-size:cover;
+    background-position: top;
+    min-height:100vh;  
+}
+.landing .container .text-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5px;
+}
+.landing .container .text-content h1{
+    font-size: 4vw;
+    font-weight: 900;
+    text-shadow: 0 1px 3px #000;
+    color: #fff;
+}
+@media (max-width : 768px) {
+    .landing .container .text-content h1{
+        font-size: 8vw;
+    }
+}
+
+
+/* end  home landing */
+
+
+/* start works landing */
+.works-landing{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../assets/images/1.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.works-landing .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-color: #00000067;
+}
+
+ .works-landing  .container .page-title{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    text-align: center;
+    color:white
+ }
+ .works-landing  .container .page-title h1{
+    font-size: 30px;
+    font-weight: 400;
+    transition: all 0.05s linear;
+ }
+ .works-landing  .container .page-title h1:hover{
+    color: #bc996d;
+ }
+ .works-landing  .container .page-title span{
+    font-weight: 200;
+    color: #b98d59;
+ }
+ .works-landing .container .page-discription{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+ }
+
+ .works-landing .container .projects{
+    width: 100%;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.works-landing .container .projects .project{
+    width: calc(90% / 3);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:992px) {
+    .works-landing .container .projects .project{
+    width: calc(100% - 60px);
+    overflow: hidden;
+    margin: 0 30px;
+}
+    
+}
+.works-landing .container .projects .project .project-image{
+    width: 100%;
+    height: 316px;
+    background-color: #eef;
+    position: relative;
+    z-index: -1;
+
+}
+.img1{
+    background-image: url(../assets/images/beyond.jpg);
+    background-size: cover;
+}
+.img2{
+    background-image: url(../assets/images/still-learning-logo.jpg);
+    background-size: cover;
+}
+.img3{
+    background-image: url(../assets/images/sant-lucient.jpg);
+    background-size: cover;
+}
+.works-landing .container .projects .project .project-image .image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000067;
+    transition:  all 0.3s;
+}
+
+.works-landing .container .projects .project:hover div:first-child div:first-child{
+    opacity: 0;
+}
+.works-landing .container .projects .project .description-holder{
+    width: calc(100% - 60px);
+    height: 316px;
+    margin-top: -220px;
+    background-color: #eee;
+}
+.works-landing .container .projects .project .description-holder .project-info{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+.works-landing .container .projects .project .description-holder .project-id{
+    grid-row: 1 / 1;
+    grid-column: 1 / -1;
+    margin:  5px 15px 0;
+}
+.works-landing .container .projects .project .description-holder .project-title{
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    margin: 0px 15px;
+    font-size: 21px;
+    line-height: 1.7;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+.works-landing .container .projects .project .description-holder .about-project{
+    grid-row: 3 / 6;
+    grid-column: 1 / -1;
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    color: gray;
+}
+.works-landing .container .projects .project .description-holder .discover-button{
+    grid-row: 6 / -1;
+    grid-column: 2 / 2;
+    font-size: 13px;
+    width: 90px;
+    height: 45px;
+    margin: 15px;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.works-landing .container .projects .project .description-holder .discover-button a{
+    color: black;
+}
+@media (max-width:992px) {
+    .works-landing .container .projects .project .description-holder{
+        margin-bottom: 100px;
+    }
+    
+}
+/* end home page landing */
+/* start about me page landing */
+
+.about-landing{
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../assets/images/background-kofia.jpeg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.about-landing .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background-color: #00000067;
+}
+.about-landing .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about-landing .page-title{
+    width: 100%;
+    margin: 150px auto 0 auto;
+    text-align: center;
+    color: white;
+}
+.about-landing .container .page-title h1{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.about-landing .container .text{
+    width: calc(50% - 20px);
+    height: 616px;
+    border: 2px solid black;
+    box-shadow: 5px 4px 20px #ffffffa1;
+    background-color: #ffffffbd;
+    margin-top: 100px;
+    margin-right: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@media (max-width:768px) {
+    .about-landing .container .text{
+        width: 100%;
+        margin: 50px auto 0 auto;
+    }
+}
+.about-landing .container .text h3{
+    font-weight: 700;
+    font-size: 22px;
+    margin:10px 0;
+}
+.about-landing .container .text p ,.about-landing .container .text ul{
+    margin: 20px 0;
+    padding-left:20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    list-style: disc;
+}
+.about-landing .container .text ul{
+    padding-left: 40px;
+}
+.about-landing .container .text ul li{
+    margin-bottom: 20px;
+}
+.about-landing .container .personal-photo{
+    width: 500px;
+    height: 616px;
+    margin-top: 100px;
+    margin-left: 20px;
+    background-image: url(../assets/images/mohamed-photo.jpeg);
+    background-size: cover;
+    border: 2px solid black;
+    box-shadow: 5px 4px 20px #ededed;
+}
+@media (max-width:768px) {
+    .about-landing .container .text h3{
+        font-size: 20px;
+    }
+    .about-landing .container .text p ,.about-landing .container .text ul{
+        font-size: 13px;
+    }
+    .about-landing .container .personal-photo{
+        width: 100%;
+        margin: 50px auto 0 auto;
+    }
+}
+
+/* end about me page landing */
+/* start footer */
+footer .container .copyright{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+footer .container .copyright a{
+    color: #b98d59;
+}
+.about-landing .container .copyright a{
+    color: black;
+}
+@media (max-width:768px) {
+    footer .container .copyright{
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+}
+/* end footer */
+
+
+
+
+ 
